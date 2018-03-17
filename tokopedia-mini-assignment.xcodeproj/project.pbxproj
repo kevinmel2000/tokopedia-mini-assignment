@@ -18,6 +18,8 @@
 		4A93A4F9205D499D0007026B /* ProductFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A93A4F8205D499D0007026B /* ProductFilter.swift */; };
 		4A93A4FC205D59A90007026B /* ShopType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A93A4FB205D59A90007026B /* ShopType.swift */; };
 		4A93A4FE205D8B2C0007026B /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A93A4FD205D8B2C0007026B /* ProductCell.swift */; };
+		4A93A501205D9F770007026B /* SearchPage_Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A93A500205D9F770007026B /* SearchPage_Collection.swift */; };
+		4A93A503205DA1AF0007026B /* SearchPage_Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A93A502205DA1AF0007026B /* SearchPage_Filter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		4A93A4F8205D499D0007026B /* ProductFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFilter.swift; sourceTree = "<group>"; };
 		4A93A4FB205D59A90007026B /* ShopType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopType.swift; sourceTree = "<group>"; };
 		4A93A4FD205D8B2C0007026B /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		4A93A500205D9F770007026B /* SearchPage_Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPage_Collection.swift; sourceTree = "<group>"; };
+		4A93A502205DA1AF0007026B /* SearchPage_Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPage_Filter.swift; sourceTree = "<group>"; };
 		8898DF0E24DEB34227735980 /* Pods-tokopedia-mini-assignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tokopedia-mini-assignment.release.xcconfig"; path = "Pods/Target Support Files/Pods-tokopedia-mini-assignment/Pods-tokopedia-mini-assignment.release.xcconfig"; sourceTree = "<group>"; };
 		B95009BBEE62A902352BF038 /* Pods_tokopedia_mini_assignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tokopedia_mini_assignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -104,6 +108,7 @@
 		4A93A4F2205D18C00007026B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4A93A4FF205D9F5C0007026B /* Extension */,
 				4A42A9D8205D004B00042314 /* SearchPage.swift */,
 				4A93A4F5205D247F0007026B /* FilterPage.swift */,
 			);
@@ -124,6 +129,15 @@
 				4A93A4FB205D59A90007026B /* ShopType.swift */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		4A93A4FF205D9F5C0007026B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4A93A500205D9F770007026B /* SearchPage_Collection.swift */,
+				4A93A502205DA1AF0007026B /* SearchPage_Filter.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		950F9B8E2B1D70D240E4C43D /* Frameworks */ = {
@@ -277,9 +291,11 @@
 				4A93A4F9205D499D0007026B /* ProductFilter.swift in Sources */,
 				4A42A9D9205D004B00042314 /* SearchPage.swift in Sources */,
 				4A93A4F6205D247F0007026B /* FilterPage.swift in Sources */,
+				4A93A503205DA1AF0007026B /* SearchPage_Filter.swift in Sources */,
 				4A93A4F4205D190A0007026B /* Product.swift in Sources */,
 				4A42A9D7205D004B00042314 /* AppDelegate.swift in Sources */,
 				4A93A4FE205D8B2C0007026B /* ProductCell.swift in Sources */,
+				4A93A501205D9F770007026B /* SearchPage_Collection.swift in Sources */,
 				4A93A4FC205D59A90007026B /* ShopType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,10 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class SearchPage:
-    UIViewController,
-    UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout,
-    ProductFilter {
+class SearchPage: UIViewController {
     
     // MARK: - IBOutlets
     
@@ -68,71 +65,6 @@ class SearchPage:
         }
     }
     
-    // MARK: - UICollectionView's Stubs
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCell", for: indexPath) as? ProductCell {
-            
-            return cell
-        }
-        
-        return UICollectionViewCell()
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 155, height: 200)
-    }
-    
-    // MARK: - ProductFilter's Stubs
-    
-    func setMinimum(price: Int) {
-        
-        parameters.updateValue(price, forKey: "pmin")
-        
-        getProductsFromApi(url: API_URL, parameters: parameters)
-    }
-    
-    func setMaximum(price: Int) {
-        
-        parameters.updateValue(price, forKey: "pmax")
-        
-        getProductsFromApi(url: API_URL, parameters: parameters)
-    }
-    
-    func show(wholesale: Bool) {
-        
-        parameters.updateValue(wholesale, forKey: "wholesale")
-        
-        getProductsFromApi(url: API_URL, parameters: parameters)
-    }
-    
-    func show(official: Bool) {
-        
-        parameters.updateValue(official, forKey: "official")
-        
-        getProductsFromApi(url: API_URL, parameters: parameters)
-    }
-    
-    func showShop(type: ShopType) {
-        
-        parameters.updateValue(type, forKey: "fshop")
-        
-        getProductsFromApi(url: API_URL, parameters: parameters)
-    }
-    
     // MARK: - Helpers
     
     func getProductsFromApi(url: String, parameters: [String : Any]) {
@@ -161,4 +93,3 @@ class SearchPage:
     }
 
 }
-
