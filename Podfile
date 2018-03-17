@@ -7,5 +7,4 @@ target 'tokopedia-mini-assignment' do
   # Pods for tokopedia-mini-assignment
   pod 'SwiftyJSON'
   pod 'Alamofire'
-  pod 'SVProgressHUD'
 end
