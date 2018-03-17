@@ -48,7 +48,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="wzx-kx-fTb">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="wzx-kx-fTb" customClass="ProductCell" customModule="tokopedia_mini_assignment" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="155" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -87,6 +87,11 @@
                                             <constraint firstItem="ors-3N-gU8" firstAttribute="leading" secondItem="wzx-kx-fTb" secondAttribute="leading" id="rBe-Dz-bDn"/>
                                             <constraint firstItem="ors-3N-gU8" firstAttribute="top" secondItem="wzx-kx-fTb" secondAttribute="top" id="vXV-M3-TA7"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="name" destination="JkH-jr-w1r" id="xYc-mA-Dgz"/>
+                                            <outlet property="price" destination="cbp-dW-oNZ" id="iKT-Ci-G89"/>
+                                            <outlet property="thumbnail" destination="ors-3N-gU8" id="4v1-9N-A1I"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
