@@ -55,9 +55,10 @@ class SearchPage: UIViewController, ProductFilter {
         
         if segue.identifier == "gotoFilterPage" {
             
-            let destination = segue.destination as! FilterPage
-            
-            destination.productFilter = self
+            if let destination = segue.destination as? FilterPage {
+                
+                destination.productFilter = self
+            }
         }
     }
     
