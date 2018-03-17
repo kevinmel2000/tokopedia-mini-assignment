@@ -18,9 +18,9 @@ class SearchPageVC: UIViewController, ProductFilter {
     
     // MARK: - Variables and Constants
     
-    let API_URL = "https://ace.tokopedia.com/search/v2.5/product?q=samsung&pmin=10000&pmax=100000&wholesale=true&official=true&fshop=2&start=0&rows=10"
+    let API_URL = "https://ace.tokopedia.com/search/v2.5/product"
     
-    let params : [String : Any] = [
+    var parameters : [String : Any] = [
         "q" : "samsung",
         "pmin" : "10000",
         "pmax" : "100000",
@@ -37,7 +37,8 @@ class SearchPageVC: UIViewController, ProductFilter {
 
         super.viewDidLoad()
         
-        getProductsFromApi(url: API_URL, parameters: params)
+        print(parameters)
+        getProductsFromApi(url: API_URL, parameters: parameters)
     }
     
     // MARK: - Actions
@@ -62,27 +63,46 @@ class SearchPageVC: UIViewController, ProductFilter {
     // MARK: - Protocol Stubs
     
     func setMinimum(price: Int) {
-        print("User set min price to: \(price)")
+        
+        parameters.updateValue(price, forKey: "pmin")
+        
+        getProductsFromApi(url: API_URL, parameters: parameters)
     }
     
     func setMaximum(price: Int) {
-        print("User set max price to: \(price)")
+        
+        parameters.updateValue(price, forKey: "pmax")
+        
+        getProductsFromApi(url: API_URL, parameters: parameters)
     }
     
     func show(wholesale: Bool) {
-        if wholesale {
-            print("Wholesale shown")
-        }
+        
+        parameters.updateValue(wholesale, forKey: "wholesale")
+        
+        getProductsFromApi(url: API_URL, parameters: parameters)
     }
     
-    func showShop(type: String) {
-        print("Only shop with type of \(type)")
+    func show(official: Bool) {
+        
+        parameters.updateValue(official, forKey: "official")
+        
+        getProductsFromApi(url: API_URL, parameters: parameters)
+    }
+    
+    func showShop(type: ShopType) {
+        
+        parameters.updateValue(type, forKey: "fshop")
+        
+        getProductsFromApi(url: API_URL, parameters: parameters)
+        
+        print(parameters)
     }
     
     // MARK: - Helpers
     
     func getProductsFromApi(url: String, parameters: [String : Any]) {
-    
+        
         Alamofire.request(url, method: .get, parameters: parameters).responseJSON {
             (response) in
             

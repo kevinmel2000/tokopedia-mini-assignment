@@ -27,10 +27,13 @@ class FilterPageVC: UIViewController {
     
     @IBAction func prevPage(_ sender: Any) {
         
-        productFilter?.setMinimum(price: Int(textField.text!)!)
+        productFilter?.setMinimum(price: 11111)
         productFilter?.setMaximum(price: 99999)
-        productFilter?.show(wholesale: true)
-        productFilter?.showShop(type: "Gold Merchant")
+        
+        productFilter?.show(wholesale: false)
+        productFilter?.show(official: false)
+        
+        productFilter?.showShop(type: ShopType.SILVER_SELLER)
         
         dismiss(animated: true, completion: nil)
     }

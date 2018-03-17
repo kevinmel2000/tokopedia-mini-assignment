@@ -12,6 +12,9 @@ protocol ProductFilter {
     
     func setMinimum (price : Int)
     func setMaximum (price : Int)
+    
     func show (wholesale : Bool)
-    func showShop (type : String)
+    func show (official : Bool)
+    
+    func showShop (type : ShopType)
 }
