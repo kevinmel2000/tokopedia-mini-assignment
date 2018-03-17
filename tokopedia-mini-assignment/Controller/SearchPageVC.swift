@@ -10,10 +10,10 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class SearchPageVC: UIViewController {
+class SearchPageVC: UIViewController, FilterApplyDelegate {
     
     // MARK: - Outlets
-    
+
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var textField: UITextField!
     
@@ -41,12 +41,14 @@ class SearchPageVC: UIViewController {
         getProductsFromApi(url: API_URL, parameters: params)
     }
     
-    // MARK: - Segue
+    // MARK: - Actions
     
     @IBAction func nextPage(_ sender: Any) {
         
         performSegue(withIdentifier: "gotoFilterPage", sender: self)
     }
+    
+    // MARK: - Segues
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -54,8 +56,16 @@ class SearchPageVC: UIViewController {
             
             let destination = segue.destination as! FilterPageVC
             
+            destination.delegate = self
             destination.dataPassedOver = textField.text!
         }
+    }
+    
+    // MARK: - Protocol Stubs
+    
+    func userSetMinimunPrice(price: String) {
+        
+        print("User set min. price to: \(price)")
     }
     
     // MARK: - Helpers

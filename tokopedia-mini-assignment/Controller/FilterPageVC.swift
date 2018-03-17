@@ -8,11 +8,21 @@
 
 import UIKit
 
+protocol FilterApplyDelegate {
+    func userSetMinimunPrice (price : String)
+}
+
 class FilterPageVC: UIViewController {
     
-    @IBOutlet weak var label: UILabel!
+    // MARK: - Variables and Constants
     
+    var delegate : FilterApplyDelegate?
     var dataPassedOver : String?
+    
+    // MARK: - Outlets
+    
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var textField: UITextField!
     
     override func viewDidLoad() {
         
@@ -20,5 +30,13 @@ class FilterPageVC: UIViewController {
         
         label.text = dataPassedOver
     }
-
+    
+    // MARK: - Actions
+    @IBAction func prevPage(_ sender: Any) {
+        
+        delegate?.userSetMinimunPrice(price: textField.text!)
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
