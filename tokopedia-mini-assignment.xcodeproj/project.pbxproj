@@ -14,6 +14,7 @@
 		4A42A9DE205D004B00042314 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A42A9DD205D004B00042314 /* Assets.xcassets */; };
 		4A42A9E1205D004B00042314 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A42A9DF205D004B00042314 /* LaunchScreen.storyboard */; };
 		4A93A4F4205D190A0007026B /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A93A4F3205D190A0007026B /* Product.swift */; };
+		4A93A4F6205D247F0007026B /* FilterPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A93A4F5205D247F0007026B /* FilterPageVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4A42A9E0205D004B00042314 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A42A9E2205D004B00042314 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A93A4F3205D190A0007026B /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		4A93A4F5205D247F0007026B /* FilterPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPageVC.swift; sourceTree = "<group>"; };
 		8898DF0E24DEB34227735980 /* Pods-tokopedia-mini-assignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tokopedia-mini-assignment.release.xcconfig"; path = "Pods/Target Support Files/Pods-tokopedia-mini-assignment/Pods-tokopedia-mini-assignment.release.xcconfig"; sourceTree = "<group>"; };
 		B95009BBEE62A902352BF038 /* Pods_tokopedia_mini_assignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tokopedia_mini_assignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				4A42A9D8205D004B00042314 /* SearchPageVC.swift */,
+				4A93A4F5205D247F0007026B /* FilterPageVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A42A9D9205D004B00042314 /* SearchPageVC.swift in Sources */,
+				4A93A4F6205D247F0007026B /* FilterPageVC.swift in Sources */,
 				4A93A4F4205D190A0007026B /* Product.swift in Sources */,
 				4A42A9D7205D004B00042314 /* AppDelegate.swift in Sources */,
 			);
