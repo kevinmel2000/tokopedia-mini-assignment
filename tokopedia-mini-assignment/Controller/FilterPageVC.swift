@@ -16,8 +16,9 @@ class FilterPageVC: UIViewController {
     
     // MARK: - Outlets
     
-    @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var textField: UITextField!
+    //...
+    
+    // MARK: - General Functions
     
     override func viewDidLoad() {
         super.viewDidLoad()

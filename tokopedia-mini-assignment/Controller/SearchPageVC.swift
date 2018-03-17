@@ -32,12 +32,13 @@ class SearchPageVC: UIViewController, ProductFilter {
     ]
     
     let productModel = Product()
+    
+    // MARK: - General Functions
 
     override func viewDidLoad() {
 
         super.viewDidLoad()
         
-        print(parameters)
         getProductsFromApi(url: API_URL, parameters: parameters)
     }
     
@@ -95,8 +96,6 @@ class SearchPageVC: UIViewController, ProductFilter {
         parameters.updateValue(type, forKey: "fshop")
         
         getProductsFromApi(url: API_URL, parameters: parameters)
-        
-        print(parameters)
     }
     
     // MARK: - Helpers
