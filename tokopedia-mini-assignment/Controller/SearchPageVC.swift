@@ -12,7 +12,12 @@ import SwiftyJSON
 
 class SearchPageVC: UIViewController {
     
+    // MARK: - Outlets
+    
     @IBOutlet weak var productName: UILabel!
+    @IBOutlet weak var textField: UITextField!
+    
+    // MARK: - Variables and Constants
     
     let API_URL = "https://ace.tokopedia.com/search/v2.5/product?q=samsung&pmin=10000&pmax=100000&wholesale=true&official=true&fshop=2&start=0&rows=10"
     
@@ -30,16 +35,30 @@ class SearchPageVC: UIViewController {
     let productModel = Product()
 
     override func viewDidLoad() {
-        
+
         super.viewDidLoad()
         
         getProductsFromApi(url: API_URL, parameters: params)
     }
     
+    // MARK: - Segue
+    
     @IBAction func nextPage(_ sender: Any) {
         
         performSegue(withIdentifier: "gotoFilterPage", sender: self)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "gotoFilterPage" {
+            
+            let destination = segue.destination as! FilterPageVC
+            
+            destination.dataPassedOver = textField.text!
+        }
+    }
+    
+    // MARK: - Helpers
     
     func getProductsFromApi(url: String, parameters: [String : Any]) {
     

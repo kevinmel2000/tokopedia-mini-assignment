@@ -9,10 +9,16 @@
 import UIKit
 
 class FilterPageVC: UIViewController {
-
+    
+    @IBOutlet weak var label: UILabel!
+    
+    var dataPassedOver : String?
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        label.text = dataPassedOver
     }
 
 }
