@@ -15,7 +15,6 @@ class SearchPageVC: UIViewController, FilterApplyDelegate {
     // MARK: - Outlets
 
     @IBOutlet weak var productName: UILabel!
-    @IBOutlet weak var textField: UITextField!
     
     // MARK: - Variables and Constants
     
@@ -57,7 +56,6 @@ class SearchPageVC: UIViewController, FilterApplyDelegate {
             let destination = segue.destination as! FilterPageVC
             
             destination.delegate = self
-            destination.dataPassedOver = textField.text!
         }
     }
     

@@ -17,7 +17,6 @@ class FilterPageVC: UIViewController {
     // MARK: - Variables and Constants
     
     var delegate : FilterApplyDelegate?
-    var dataPassedOver : String?
     
     // MARK: - Outlets
     
@@ -25,13 +24,11 @@ class FilterPageVC: UIViewController {
     @IBOutlet weak var textField: UITextField!
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        
-        label.text = dataPassedOver
     }
     
     // MARK: - Actions
+    
     @IBAction func prevPage(_ sender: Any) {
         
         delegate?.userSetMinimunPrice(price: textField.text!)

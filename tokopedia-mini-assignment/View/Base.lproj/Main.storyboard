@@ -25,13 +25,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QNC-3T-vhd">
-                                <rect key="frame" x="16" y="151" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWd-vz-ofd">
                                 <rect key="frame" x="20" y="189" width="88" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -46,7 +39,6 @@
                     </view>
                     <connections>
                         <outlet property="productName" destination="rvo-2a-Mcp" id="cC8-9D-5bK"/>
-                        <outlet property="textField" destination="QNC-3T-vhd" id="t8g-0h-rHj"/>
                         <segue destination="rd8-V4-wM2" kind="show" identifier="gotoFilterPage" id="ksN-gR-Key"/>
                     </connections>
                 </viewController>
