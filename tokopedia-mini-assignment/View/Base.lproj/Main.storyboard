@@ -112,6 +112,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="collection" destination="ago-4H-i0y" id="iJU-kh-u7l"/>
                         <segue destination="rd8-V4-wM2" kind="show" identifier="gotoFilterPage" id="ksN-gR-Key"/>
                     </connections>
                 </viewController>

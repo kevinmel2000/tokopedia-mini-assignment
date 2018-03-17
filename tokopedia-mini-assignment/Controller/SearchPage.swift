@@ -10,11 +10,14 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class SearchPage: UIViewController, ProductFilter {
+class SearchPage:
+    UIViewController,
+    UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout,
+    ProductFilter {
     
-    // MARK: - Outlets
-
-    //...
+    // MARK: - IBOutlets
+    
+    @IBOutlet weak var collection: UICollectionView!
     
     // MARK: - Variables and Constants
     
@@ -39,6 +42,9 @@ class SearchPage: UIViewController, ProductFilter {
 
         super.viewDidLoad()
         
+        collection.dataSource = self
+        collection.delegate = self
+        
         getProductsFromApi(url: API_URL, parameters: parameters)
     }
     
@@ -62,7 +68,35 @@ class SearchPage: UIViewController, ProductFilter {
         }
     }
     
-    // MARK: - Protocol Stubs
+    // MARK: - UICollectionView's Stubs
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 30
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCell", for: indexPath) as? ProductCell {
+            
+            return cell
+        }
+        
+        return UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 155, height: 200)
+    }
+    
+    // MARK: - ProductFilter's Stubs
     
     func setMinimum(price: Int) {
         
