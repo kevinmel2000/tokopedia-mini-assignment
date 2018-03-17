@@ -58,7 +58,7 @@ class SearchPageVC: UIViewController {
         
         productModel.name = json["data"][0]["name"].stringValue
         
-        print(productModel.name)
+        productName.text = productModel.name
     }
 
 }
