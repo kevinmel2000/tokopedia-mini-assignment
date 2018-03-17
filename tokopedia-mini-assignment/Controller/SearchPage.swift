@@ -14,7 +14,7 @@ class SearchPage: UIViewController, ProductFilter {
     
     // MARK: - Outlets
 
-    @IBOutlet weak var productName: UILabel!
+    //...
     
     // MARK: - Variables and Constants
     
@@ -123,7 +123,7 @@ class SearchPage: UIViewController, ProductFilter {
         
         productModel.name = json["data"][0]["name"].stringValue
         
-        productName.text = productModel.name
+        print(productModel.name)
     }
 
 }
