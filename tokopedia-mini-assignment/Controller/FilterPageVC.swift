@@ -8,15 +8,11 @@
 
 import UIKit
 
-protocol FilterApplyDelegate {
-    func userSetMinimunPrice (price : String)
-}
-
 class FilterPageVC: UIViewController {
     
     // MARK: - Variables and Constants
     
-    var delegate : FilterApplyDelegate?
+    var productFilter : ProductFilter?
     
     // MARK: - Outlets
     
@@ -31,7 +27,10 @@ class FilterPageVC: UIViewController {
     
     @IBAction func prevPage(_ sender: Any) {
         
-        delegate?.userSetMinimunPrice(price: textField.text!)
+        productFilter?.setMinimum(price: Int(textField.text!)!)
+        productFilter?.setMaximum(price: 99999)
+        productFilter?.show(wholesale: true)
+        productFilter?.showShop(type: "Gold Merchant")
         
         dismiss(animated: true, completion: nil)
     }

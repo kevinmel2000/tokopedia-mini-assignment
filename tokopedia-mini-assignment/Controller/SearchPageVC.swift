@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class SearchPageVC: UIViewController, FilterApplyDelegate {
+class SearchPageVC: UIViewController, ProductFilter {
     
     // MARK: - Outlets
 
@@ -55,15 +55,28 @@ class SearchPageVC: UIViewController, FilterApplyDelegate {
             
             let destination = segue.destination as! FilterPageVC
             
-            destination.delegate = self
+            destination.productFilter = self
         }
     }
     
     // MARK: - Protocol Stubs
     
-    func userSetMinimunPrice(price: String) {
-        
-        print("User set min. price to: \(price)")
+    func setMinimum(price: Int) {
+        print("User set min price to: \(price)")
+    }
+    
+    func setMaximum(price: Int) {
+        print("User set max price to: \(price)")
+    }
+    
+    func show(wholesale: Bool) {
+        if wholesale {
+            print("Wholesale shown")
+        }
+    }
+    
+    func showShop(type: String) {
+        print("Only shop with type of \(type)")
     }
     
     // MARK: - Helpers
