@@ -12,6 +12,8 @@ import SwiftyJSON
 
 class SearchPageVC: UIViewController {
     
+    @IBOutlet weak var productName: UILabel!
+    
     let API_URL = "https://ace.tokopedia.com/search/v2.5/product?q=samsung&pmin=10000&pmax=100000&wholesale=true&official=true&fshop=2&start=0&rows=10"
     
     let params : [String : Any] = [
@@ -39,14 +41,21 @@ class SearchPageVC: UIViewController {
             if response.result.isSuccess {
                 print("SUCCESS getting products data from API")
                 
-                let ProductsJSON : JSON = JSON(response.result.value!)
+                let productsJSON : JSON = JSON(response.result.value!)
                 
-                print(ProductsJSON)
+                self.updateProductList(json: productsJSON)
                 
             } else {
                 print("ERROR: \(String(describing: response.result.error))")
             }
         }
+    }
+    
+    func updateProductList(json : JSON) {
+        
+        let productName = json["data"][0]["name"]
+        
+        print(productName)
     }
 
 }
