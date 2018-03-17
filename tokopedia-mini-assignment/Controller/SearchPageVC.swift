@@ -26,8 +26,11 @@ class SearchPageVC: UIViewController {
         "start" : "0",
         "rows" : "10"
     ]
+    
+    let productModel = Product()
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         getProductsFromApi(url: API_URL, parameters: params)
@@ -39,13 +42,13 @@ class SearchPageVC: UIViewController {
             (response) in
             
             if response.result.isSuccess {
-                print("SUCCESS getting products data from API")
                 
                 let productsJSON : JSON = JSON(response.result.value!)
                 
                 self.updateProductList(json: productsJSON)
                 
             } else {
+                
                 print("ERROR: \(String(describing: response.result.error))")
             }
         }
@@ -53,9 +56,9 @@ class SearchPageVC: UIViewController {
     
     func updateProductList(json : JSON) {
         
-        let productName = json["data"][0]["name"]
+        productModel.name = json["data"][0]["name"].stringValue
         
-        print(productName)
+        print(productModel.name)
     }
 
 }
