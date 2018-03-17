@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		02EA61DA37968C4F9C936949 /* Pods_tokopedia_mini_assignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95009BBEE62A902352BF038 /* Pods_tokopedia_mini_assignment.framework */; };
 		4A42A9D7205D004B00042314 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A42A9D6205D004B00042314 /* AppDelegate.swift */; };
-		4A42A9D9205D004B00042314 /* SearchPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A42A9D8205D004B00042314 /* SearchPageVC.swift */; };
+		4A42A9D9205D004B00042314 /* SearchPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A42A9D8205D004B00042314 /* SearchPage.swift */; };
 		4A42A9DC205D004B00042314 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A42A9DA205D004B00042314 /* Main.storyboard */; };
 		4A42A9DE205D004B00042314 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A42A9DD205D004B00042314 /* Assets.xcassets */; };
 		4A42A9E1205D004B00042314 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A42A9DF205D004B00042314 /* LaunchScreen.storyboard */; };
 		4A93A4F4205D190A0007026B /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A93A4F3205D190A0007026B /* Product.swift */; };
-		4A93A4F6205D247F0007026B /* FilterPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A93A4F5205D247F0007026B /* FilterPageVC.swift */; };
+		4A93A4F6205D247F0007026B /* FilterPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A93A4F5205D247F0007026B /* FilterPage.swift */; };
 		4A93A4F9205D499D0007026B /* ProductFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A93A4F8205D499D0007026B /* ProductFilter.swift */; };
 		4A93A4FC205D59A90007026B /* ShopType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A93A4FB205D59A90007026B /* ShopType.swift */; };
 /* End PBXBuildFile section */
@@ -23,13 +23,13 @@
 		489A2D31F5F3B478A359E4F2 /* Pods-tokopedia-mini-assignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tokopedia-mini-assignment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tokopedia-mini-assignment/Pods-tokopedia-mini-assignment.debug.xcconfig"; sourceTree = "<group>"; };
 		4A42A9D3205D004B00042314 /* tokopedia-mini-assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tokopedia-mini-assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A42A9D6205D004B00042314 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4A42A9D8205D004B00042314 /* SearchPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageVC.swift; sourceTree = "<group>"; };
+		4A42A9D8205D004B00042314 /* SearchPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPage.swift; sourceTree = "<group>"; };
 		4A42A9DB205D004B00042314 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4A42A9DD205D004B00042314 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A42A9E0205D004B00042314 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A42A9E2205D004B00042314 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A93A4F3205D190A0007026B /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
-		4A93A4F5205D247F0007026B /* FilterPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPageVC.swift; sourceTree = "<group>"; };
+		4A93A4F5205D247F0007026B /* FilterPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPage.swift; sourceTree = "<group>"; };
 		4A93A4F8205D499D0007026B /* ProductFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFilter.swift; sourceTree = "<group>"; };
 		4A93A4FB205D59A90007026B /* ShopType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopType.swift; sourceTree = "<group>"; };
 		8898DF0E24DEB34227735980 /* Pods-tokopedia-mini-assignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tokopedia-mini-assignment.release.xcconfig"; path = "Pods/Target Support Files/Pods-tokopedia-mini-assignment/Pods-tokopedia-mini-assignment.release.xcconfig"; sourceTree = "<group>"; };
@@ -101,8 +101,8 @@
 		4A93A4F2205D18C00007026B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4A42A9D8205D004B00042314 /* SearchPageVC.swift */,
-				4A93A4F5205D247F0007026B /* FilterPageVC.swift */,
+				4A42A9D8205D004B00042314 /* SearchPage.swift */,
+				4A93A4F5205D247F0007026B /* FilterPage.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -272,8 +272,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A93A4F9205D499D0007026B /* ProductFilter.swift in Sources */,
-				4A42A9D9205D004B00042314 /* SearchPageVC.swift in Sources */,
-				4A93A4F6205D247F0007026B /* FilterPageVC.swift in Sources */,
+				4A42A9D9205D004B00042314 /* SearchPage.swift in Sources */,
+				4A93A4F6205D247F0007026B /* FilterPage.swift in Sources */,
 				4A93A4F4205D190A0007026B /* Product.swift in Sources */,
 				4A42A9D7205D004B00042314 /* AppDelegate.swift in Sources */,
 				4A93A4FC205D59A90007026B /* ShopType.swift in Sources */,

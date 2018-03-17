@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class SearchPageVC: UIViewController, ProductFilter {
+class SearchPage: UIViewController, ProductFilter {
     
     // MARK: - Outlets
 
@@ -55,7 +55,7 @@ class SearchPageVC: UIViewController, ProductFilter {
         
         if segue.identifier == "gotoFilterPage" {
             
-            let destination = segue.destination as! FilterPageVC
+            let destination = segue.destination as! FilterPage
             
             destination.productFilter = self
         }

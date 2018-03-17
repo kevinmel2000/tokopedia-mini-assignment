@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Search PageVC-->
+        <!--Search Page-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SearchPageVC" customModule="tokopedia_mini_assignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SearchPage" customModule="tokopedia_mini_assignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,10 +46,10 @@
             </objects>
             <point key="canvasLocation" x="-55.200000000000003" y="28.335832083958024"/>
         </scene>
-        <!--Filter PageVC-->
+        <!--Filter Page-->
         <scene sceneID="EYn-Qx-3h1">
             <objects>
-                <viewController id="rd8-V4-wM2" customClass="FilterPageVC" customModule="tokopedia_mini_assignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rd8-V4-wM2" customClass="FilterPage" customModule="tokopedia_mini_assignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XEj-Td-7iY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

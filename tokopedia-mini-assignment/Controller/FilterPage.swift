@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FilterPageVC: UIViewController {
+class FilterPage: UIViewController {
     
     // MARK: - Variables and Constants
     
