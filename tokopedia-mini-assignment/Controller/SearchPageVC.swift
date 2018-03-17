@@ -36,6 +36,11 @@ class SearchPageVC: UIViewController {
         getProductsFromApi(url: API_URL, parameters: params)
     }
     
+    @IBAction func nextPage(_ sender: Any) {
+        
+        performSegue(withIdentifier: "gotoFilterPage", sender: self)
+    }
+    
     func getProductsFromApi(url: String, parameters: [String : Any]) {
     
         Alamofire.request(url, method: .get, parameters: parameters).responseJSON {

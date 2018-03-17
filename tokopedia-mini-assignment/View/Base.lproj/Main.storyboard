@@ -30,7 +30,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next Page &gt;"/>
                                 <connections>
-                                    <segue destination="rd8-V4-wM2" kind="show" id="PZX-br-dJk"/>
+                                    <action selector="nextPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sdt-q0-HJ7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -39,6 +39,7 @@
                     </view>
                     <connections>
                         <outlet property="productName" destination="rvo-2a-Mcp" id="cC8-9D-5bK"/>
+                        <segue destination="rd8-V4-wM2" kind="show" identifier="gotoFilterPage" id="ksN-gR-Key"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
