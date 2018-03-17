@@ -17,6 +17,7 @@
 		4A93A4F6205D247F0007026B /* FilterPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A93A4F5205D247F0007026B /* FilterPage.swift */; };
 		4A93A4F9205D499D0007026B /* ProductFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A93A4F8205D499D0007026B /* ProductFilter.swift */; };
 		4A93A4FC205D59A90007026B /* ShopType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A93A4FB205D59A90007026B /* ShopType.swift */; };
+		4A93A4FE205D8B2C0007026B /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A93A4FD205D8B2C0007026B /* ProductCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		4A93A4F5205D247F0007026B /* FilterPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPage.swift; sourceTree = "<group>"; };
 		4A93A4F8205D499D0007026B /* ProductFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFilter.swift; sourceTree = "<group>"; };
 		4A93A4FB205D59A90007026B /* ShopType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopType.swift; sourceTree = "<group>"; };
+		4A93A4FD205D8B2C0007026B /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		8898DF0E24DEB34227735980 /* Pods-tokopedia-mini-assignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tokopedia-mini-assignment.release.xcconfig"; path = "Pods/Target Support Files/Pods-tokopedia-mini-assignment/Pods-tokopedia-mini-assignment.release.xcconfig"; sourceTree = "<group>"; };
 		B95009BBEE62A902352BF038 /* Pods_tokopedia_mini_assignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tokopedia_mini_assignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				4A42A9DA205D004B00042314 /* Main.storyboard */,
+				4A93A4FD205D8B2C0007026B /* ProductCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				4A93A4F6205D247F0007026B /* FilterPage.swift in Sources */,
 				4A93A4F4205D190A0007026B /* Product.swift in Sources */,
 				4A42A9D7205D004B00042314 /* AppDelegate.swift in Sources */,
+				4A93A4FE205D8B2C0007026B /* ProductCell.swift in Sources */,
 				4A93A4FC205D59A90007026B /* ShopType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

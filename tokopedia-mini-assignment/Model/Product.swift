@@ -11,8 +11,8 @@ import Foundation
 class Product {
     
     private var _id : Int!
-    private var _name : String!
     private var _uri : String!
+    private var _name : String!
     private var _price : String!
     private var _imageUri : String?
     private var _imageUri700 : String?
@@ -21,15 +21,21 @@ class Product {
         //
     }
     
-    init(name : String, price : String, image700 : String) {
+    init(name : String, price : String, imageUri : String) {
         _name = name
         _price = price
-        _imageUri700 = image700
+        _imageUri = imageUri
     }
     
     var id : Int {
         get {
             return _id
+        }
+    }
+    
+    var uri : String {
+        get {
+            return _uri
         }
     }
     
@@ -43,9 +49,21 @@ class Product {
         }
     }
     
-    var uri : String {
+    var price : String {
         get {
-            return _uri
+            return _price
+        }
+    }
+    
+    var image : String {
+        get {
+            return _imageUri!
+        }
+    }
+    
+    var image700 : String {
+        get {
+            return _imageUri700!
         }
     }
 }
