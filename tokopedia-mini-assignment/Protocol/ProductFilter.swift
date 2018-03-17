@@ -9,6 +9,7 @@
 import Foundation
 
 protocol ProductFilter {
+    
     func setMinimum (price : Int)
     func setMaximum (price : Int)
     func show (wholesale : Bool)
