@@ -74,15 +74,18 @@ class SearchPage: UIViewController {
             
             if response.result.isSuccess {
                 
+                self.products.removeAll()
+                
                 let productsJSON : JSON = JSON(response.result.value!)
                 
                 for (_, data) : (String, JSON) in productsJSON["data"] {
                     
-                    self.updateProduct(data)
+                    self.addProduct(data)
                 }
                 
-                print("self")
-                print(self.products[1].name)
+                DispatchQueue.main.async {
+                    self.collection?.reloadData()
+                }
                 
             } else {
                 
@@ -90,16 +93,16 @@ class SearchPage: UIViewController {
             }
         }
         
-        print("non-self")
-        print(products)
     }
     
-    func updateProduct(_ data : JSON) {
+    func addProduct(_ data : JSON) {
         
-        products.append(Product(id: data["id"].intValue,
-                             name: data["name"].stringValue,
-                             price: data["price"].stringValue,
-                             imageUri: data["image_uri"].stringValue))
+        let product = Product(id: data["id"].intValue,
+                              name: data["name"].stringValue,
+                              price: data["price"].stringValue,
+                              imageUri: data["image_uri"].stringValue)
+        
+        products.append(product)
     }
 
 }

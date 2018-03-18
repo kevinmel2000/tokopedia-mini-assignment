@@ -24,8 +24,8 @@ class FilterPage: UIViewController {
     
     @IBAction func prevPage(_ sender: Any) {
         
-        productFilter?.setMinimum(price: 11111)
-        productFilter?.setMaximum(price: 99999)
+        productFilter?.setMinimum(price: 111111)
+        productFilter?.setMaximum(price: 999999)
         
         productFilter?.show(wholesale: false)
         productFilter?.show(official: false)
