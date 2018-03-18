@@ -33,9 +33,23 @@
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s5r-ZC-4rO">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
-                                <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iL3-Sk-yfS">
+                                        <rect key="frame" x="8" y="46" width="359" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="Lj3-rn-2bG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="BQd-ha-1oq"/>
+                                    <constraint firstAttribute="bottom" secondItem="iL3-Sk-yfS" secondAttribute="bottom" constant="8" id="aZE-8U-dMI"/>
+                                    <constraint firstItem="iL3-Sk-yfS" firstAttribute="leading" secondItem="s5r-ZC-4rO" secondAttribute="leading" constant="8" id="bzf-tw-X3r"/>
+                                    <constraint firstAttribute="trailing" secondItem="iL3-Sk-yfS" secondAttribute="trailing" constant="8" id="hYX-MI-xYL"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ago-4H-i0y">
