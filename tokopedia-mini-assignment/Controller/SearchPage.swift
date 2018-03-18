@@ -78,24 +78,18 @@ class SearchPage: UIViewController {
                 
                 if (productsJSON["data"].isEmpty) {
                     
-                    let alert = UIAlertController(title: "INFO",
-                                                  message: "Tidak ditemukan produk dari filter yang Anda buat.",
-                                                  preferredStyle: .alert)
+                    self.reloadCollectionData()
                     
-                    let OkAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    self.showAlertInfo("Tidak ada produk dari filter yang Anda buat.")
                     
-                    alert.addAction(OkAction)
+                } else {
                     
-                    self.present(alert, animated: true, completion: nil)
-                }
-                
-                for (_, data) : (String, JSON) in productsJSON["data"] {
+                    for (_, data) : (String, JSON) in productsJSON["data"] {
+                        
+                        self.addProduct(data)
+                    }
                     
-                    self.addProduct(data)
-                }
-                
-                DispatchQueue.main.async {
-                    self.collection?.reloadData()
+                    self.reloadCollectionData()
                 }
                 
             } else {
@@ -114,6 +108,28 @@ class SearchPage: UIViewController {
                               imageUri: data["image_uri"].stringValue)
         
         products.append(product)
+    }
+    
+    func reloadCollectionData() {
+        
+        DispatchQueue.main.async {
+            
+            self.collection?.dataSource = self
+            self.collection?.reloadData()
+        }
+    }
+    
+    func showAlertInfo(_ message : String) {
+        
+        let alert = UIAlertController(title: "Info",
+                                      message: message,
+                                      preferredStyle: .alert)
+        
+        let OkAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        
+        alert.addAction(OkAction)
+        
+        self.present(alert, animated: true, completion: nil)
     }
 
 }
