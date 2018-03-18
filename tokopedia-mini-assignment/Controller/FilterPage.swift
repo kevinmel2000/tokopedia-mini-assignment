@@ -15,6 +15,10 @@ class FilterPage: UIViewController {
     @IBOutlet weak var minPrice: UITextField!
     @IBOutlet weak var maxPrice: UITextField!
     
+    @IBOutlet weak var wholesale: UISwitch!
+    @IBOutlet weak var goldMerchant: UISwitch!
+    @IBOutlet weak var officialStore: UISwitch!
+    
     // MARK: - Variables and Constants
     
     let defaultMinPrice : Int = 10000

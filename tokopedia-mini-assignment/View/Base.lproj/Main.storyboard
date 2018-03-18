@@ -264,8 +264,11 @@
                         <viewLayoutGuide key="safeArea" id="rOC-kS-yLd"/>
                     </view>
                     <connections>
+                        <outlet property="goldMerchant" destination="oKP-TK-Q2e" id="woJ-B8-oLc"/>
                         <outlet property="maxPrice" destination="iu6-8I-Fgt" id="Sql-SE-Kcm"/>
                         <outlet property="minPrice" destination="sGN-CT-7nD" id="llA-kg-JN2"/>
+                        <outlet property="officialStore" destination="y78-LK-pvh" id="TiM-KL-Hyk"/>
+                        <outlet property="wholesale" destination="uFe-3J-s8N" id="nsS-LG-LyW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KSz-LG-xZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
