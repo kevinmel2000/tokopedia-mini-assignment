@@ -76,6 +76,19 @@ class SearchPage: UIViewController {
                 
                 let productsJSON : JSON = JSON(response.result.value!)
                 
+                if (productsJSON["data"].isEmpty) {
+                    
+                    let alert = UIAlertController(title: "INFO",
+                                                  message: "Tidak ditemukan produk dari filter yang Anda buat.",
+                                                  preferredStyle: .alert)
+                    
+                    let OkAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    
+                    alert.addAction(OkAction)
+                    
+                    self.present(alert, animated: true, completion: nil)
+                }
+                
                 for (_, data) : (String, JSON) in productsJSON["data"] {
                     
                     self.addProduct(data)
