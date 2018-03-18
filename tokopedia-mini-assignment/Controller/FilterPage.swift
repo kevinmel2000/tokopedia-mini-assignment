@@ -17,6 +17,9 @@ class FilterPage: UIViewController {
     
     // MARK: - Variables and Constants
     
+    let defaultMinPrice : Int = 10000
+    let defaultMaxPrice : Int = 100000
+    
     var productFilter : ProductFilter?
     
     // MARK: - General Functions
@@ -29,8 +32,13 @@ class FilterPage: UIViewController {
     
     @IBAction func applyDidTouched(_ sender: Any) {
         
-        productFilter?.setMinimum(price: 111111)
-        productFilter?.setMaximum(price: 999999)
+        if let minPrice = minPrice.text {
+            productFilter?.setMinimum(price: Int(minPrice)!)
+        }
+        
+        if let maxPrice = maxPrice.text {
+            productFilter?.setMaximum(price: Int(maxPrice)!)
+        }
         
         productFilter?.show(wholesale: false)
         productFilter?.show(official: false)
@@ -42,8 +50,8 @@ class FilterPage: UIViewController {
     
     @IBAction func resetDidTouched(_ sender: Any) {
         
-        productFilter?.setMinimum(price: 10000)
-        productFilter?.setMaximum(price: 100000)
+        productFilter?.setMinimum(price: defaultMinPrice)
+        productFilter?.setMaximum(price: defaultMaxPrice)
         
         productFilter?.show(wholesale: true)
         productFilter?.show(official: true)
