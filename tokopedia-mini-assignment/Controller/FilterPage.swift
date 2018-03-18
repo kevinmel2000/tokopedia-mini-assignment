@@ -10,6 +10,11 @@ import UIKit
 
 class FilterPage: UIViewController {
     
+    // MARK: - IBOutlets
+    
+    @IBOutlet weak var minPrice: UITextField!
+    @IBOutlet weak var maxPrice: UITextField!
+    
     // MARK: - Variables and Constants
     
     var productFilter : ProductFilter?
