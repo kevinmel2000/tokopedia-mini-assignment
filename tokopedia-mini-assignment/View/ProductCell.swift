@@ -28,6 +28,6 @@ class ProductCell: UICollectionViewCell {
         
         name.text = product.name
         price.text = product.price
-        thumbnail.image = UIImage(named: product.image)
+        thumbnail.image = UIImage(named: product.imageUri)
     }
 }

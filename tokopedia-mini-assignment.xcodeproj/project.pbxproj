@@ -79,6 +79,7 @@
 				4A93A4F1205D18BC0007026B /* View */,
 				4A93A4F2205D18C00007026B /* Controller */,
 				4A93A4F7205D49620007026B /* Protocol */,
+				4A93A4FF205D9F5C0007026B /* Extension */,
 				4A93A4FA205D598E0007026B /* Enum */,
 				4A42A9D6205D004B00042314 /* AppDelegate.swift */,
 				4A42A9DD205D004B00042314 /* Assets.xcassets */,
@@ -108,7 +109,6 @@
 		4A93A4F2205D18C00007026B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4A93A4FF205D9F5C0007026B /* Extension */,
 				4A42A9D8205D004B00042314 /* SearchPage.swift */,
 				4A93A4F5205D247F0007026B /* FilterPage.swift */,
 			);

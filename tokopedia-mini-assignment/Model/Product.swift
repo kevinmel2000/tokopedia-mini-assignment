@@ -14,22 +14,26 @@ class Product {
     private var _uri : String!
     private var _name : String!
     private var _price : String!
-    private var _imageUri : String?
-    private var _imageUri700 : String?
+    private var _imageUri : String!
+    private var _imageUri700 : String!
     
-    init() {
-        //
-    }
-    
-    init(name : String, price : String, imageUri : String) {
-        _name = name
-        _price = price
-        _imageUri = imageUri
+    init(id : Int,
+         name : String,
+         price : String,
+         imageUri : String) {
+        
+        self.id = id
+        self.name = name
+        self.price = price
+        self.imageUri = imageUri
     }
     
     var id : Int {
         get {
             return _id
+        }
+        set(id) {
+            _id = id
         }
     }
     
@@ -37,13 +41,15 @@ class Product {
         get {
             return _uri
         }
+        set(uri) {
+            _uri = uri
+        }
     }
     
     var name : String {
         get {
             return _name
         }
-        
         set(name) {
             _name = name
         }
@@ -53,17 +59,27 @@ class Product {
         get {
             return _price
         }
-    }
-    
-    var image : String {
-        get {
-            return _imageUri!
+        set(price) {
+            _price = price
         }
     }
     
-    var image700 : String {
+    var imageUri : String {
         get {
-            return _imageUri700!
+            return _imageUri
+        }
+        set(imageUri) {
+            _imageUri = imageUri
+        }
+    }
+    
+    var imageUri700 : String {
+        get {
+            return _imageUri700
+        }
+        set(imageUri700) {
+            _imageUri700 = imageUri700
         }
     }
 }
+

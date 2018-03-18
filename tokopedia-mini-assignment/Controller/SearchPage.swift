@@ -31,7 +31,7 @@ class SearchPage: UIViewController {
         "rows" : "10"
     ]
     
-    let productModel = Product()
+    var products = [Product]()
     
     // MARK: - General Functions
 
@@ -76,20 +76,27 @@ class SearchPage: UIViewController {
                 
                 let productsJSON : JSON = JSON(response.result.value!)
                 
-                self.updateProductList(json: productsJSON)
+                // print(productsJSON["data"])
+                
+                for (_, data) : (String, JSON) in productsJSON["data"] {
+                    
+                    self.products.append(Product(id: data["id"].intValue,
+                                            name: data["name"].stringValue,
+                                            price: data["price"].stringValue,
+                                            imageUri: data["image_uri"].stringValue))
+                }
+                
+                print("self")
+                print(self.products[1].name)
                 
             } else {
                 
                 print("ERROR: \(String(describing: response.result.error))")
             }
         }
-    }
-    
-    func updateProductList(json : JSON) {
         
-        productModel.name = json["data"][0]["name"].stringValue
-        
-        print(productModel.name)
+        print("non-self")
+        print(products)
     }
 
 }
