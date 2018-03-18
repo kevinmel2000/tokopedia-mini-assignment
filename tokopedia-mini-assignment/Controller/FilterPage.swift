@@ -32,12 +32,16 @@ class FilterPage: UIViewController {
     
     @IBAction func applyDidTouched(_ sender: Any) {
         
-        if let minPrice = minPrice.text {
-            productFilter?.setMinimum(price: Int(minPrice)!)
+        if !(minPrice.text?.isEmpty)! {
+            productFilter?.setMinimum(price: Int(minPrice.text!)!)
+        } else {
+            productFilter?.setMinimum(price: defaultMinPrice)
         }
         
-        if let maxPrice = maxPrice.text {
-            productFilter?.setMaximum(price: Int(maxPrice)!)
+        if !(maxPrice.text?.isEmpty)! {
+            productFilter?.setMaximum(price: Int(maxPrice.text!)!)
+        } else {
+            productFilter?.setMaximum(price: defaultMaxPrice)
         }
         
         productFilter?.show(wholesale: false)
