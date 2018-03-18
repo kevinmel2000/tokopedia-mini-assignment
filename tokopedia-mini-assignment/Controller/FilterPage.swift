@@ -48,10 +48,14 @@ class FilterPage: UIViewController {
             productFilter?.setMaximum(price: defaultMaxPrice)
         }
         
-        productFilter?.show(wholesale: false)
-        productFilter?.show(official: false)
+        productFilter?.show(wholesale: wholesale.isOn)
+        productFilter?.show(official: officialStore.isOn)
         
-        productFilter?.showShop(type: ShopType.SILVER_MERCHANT)
+        if goldMerchant.isOn {
+            productFilter?.showShop(type: ShopType.GOLD_MERCHANT)
+        } else {
+            //
+        }
         
         dismiss(animated: true, completion: nil)
     }
