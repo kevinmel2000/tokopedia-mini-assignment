@@ -29,7 +29,12 @@ class FilterPage: UIViewController {
     // MARK: - General Functions
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        
+        view.addGestureRecognizer(tap)
     }
     
     // MARK: - Actions
@@ -76,5 +81,12 @@ class FilterPage: UIViewController {
     @IBAction func closeDidTouched(_ sender: Any) {
         
         dismiss(animated: true, completion: nil)
+    }
+    
+    // MARK: - Helpers
+    
+    @objc func dismissKeyboard() {
+        
+        view.endEditing(true)
     }
 }
