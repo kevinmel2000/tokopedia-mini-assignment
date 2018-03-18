@@ -76,14 +76,9 @@ class SearchPage: UIViewController {
                 
                 let productsJSON : JSON = JSON(response.result.value!)
                 
-                // print(productsJSON["data"])
-                
                 for (_, data) : (String, JSON) in productsJSON["data"] {
                     
-                    self.products.append(Product(id: data["id"].intValue,
-                                            name: data["name"].stringValue,
-                                            price: data["price"].stringValue,
-                                            imageUri: data["image_uri"].stringValue))
+                    self.updateProduct(data)
                 }
                 
                 print("self")
@@ -97,6 +92,14 @@ class SearchPage: UIViewController {
         
         print("non-self")
         print(products)
+    }
+    
+    func updateProduct(_ data : JSON) {
+        
+        products.append(Product(id: data["id"].intValue,
+                             name: data["name"].stringValue,
+                             price: data["price"].stringValue,
+                             imageUri: data["image_uri"].stringValue))
     }
 
 }

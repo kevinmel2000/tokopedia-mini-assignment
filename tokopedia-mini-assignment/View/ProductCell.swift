@@ -22,7 +22,7 @@ class ProductCell: UICollectionViewCell {
         //layer.cornerRadius = 5.0
     }
     
-    func configureCell(product : Product) {
+    func configure(product : Product) {
         
         self.product = product
         

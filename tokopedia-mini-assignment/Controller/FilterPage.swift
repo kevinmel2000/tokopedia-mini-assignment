@@ -14,10 +14,6 @@ class FilterPage: UIViewController {
     
     var productFilter : ProductFilter?
     
-    // MARK: - Outlets
-    
-    //...
-    
     // MARK: - General Functions
     
     override func viewDidLoad() {
