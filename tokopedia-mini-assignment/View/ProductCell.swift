@@ -28,6 +28,16 @@ class ProductCell: UICollectionViewCell {
         
         name.text = product.name
         price.text = product.price
-        thumbnail.image = UIImage(named: product.imageUri)
+        
+        DispatchQueue.global().async {
+            
+            if let data = try? Data(contentsOf: URL(string: product.imageUri)!) {
+                
+                DispatchQueue.main.async {
+                    
+                    self.thumbnail.image = UIImage(data: data)
+                }
+            }
+        }
     }
 }
