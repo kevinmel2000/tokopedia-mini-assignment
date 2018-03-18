@@ -143,22 +143,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2i-56-PGS">
-                                <rect key="frame" x="16" y="188" width="86" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="&lt; Prev Page"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9J5-xj-fch">
+                                <rect key="frame" x="16" y="592" width="343" height="55"/>
+                                <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="iN8-Xv-wtg"/>
+                                </constraints>
+                                <state key="normal" title="Apply">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
-                                    <action selector="prevPage:" destination="rd8-V4-wM2" eventType="touchUpInside" id="ZDG-d4-3JQ"/>
+                                    <action selector="applyDidTouched:" destination="rd8-V4-wM2" eventType="touchUpInside" id="BLz-OO-RDV"/>
+                                    <action selector="nextPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CCG-nP-lYk"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q78-4v-e6h">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FM3-UA-mUe">
+                                        <rect key="frame" x="8" y="37" width="39" height="30"/>
+                                        <state key="normal" title="Close">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closeDidTouched:" destination="rd8-V4-wM2" eventType="touchUpInside" id="jc5-Hz-12n"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gC-TY-Nxu">
+                                        <rect key="frame" x="328" y="37" width="39" height="30"/>
+                                        <state key="normal" title="Reset"/>
+                                        <connections>
+                                            <action selector="resetDidTouched:" destination="rd8-V4-wM2" eventType="touchUpInside" id="Wqj-wI-9EH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="5gC-TY-Nxu" secondAttribute="bottom" constant="8" id="QQy-ez-7bC"/>
+                                    <constraint firstAttribute="trailing" secondItem="5gC-TY-Nxu" secondAttribute="trailing" constant="8" id="YNX-Dd-aTN"/>
+                                    <constraint firstItem="FM3-UA-mUe" firstAttribute="leading" secondItem="Q78-4v-e6h" secondAttribute="leading" constant="8" id="bTW-sT-62d"/>
+                                    <constraint firstAttribute="height" constant="75" id="jNc-2O-WsJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="FM3-UA-mUe" secondAttribute="bottom" constant="8" id="jaP-eZ-vEd"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rOC-kS-yLd" firstAttribute="bottom" secondItem="9J5-xj-fch" secondAttribute="bottom" constant="20" id="NML-qF-ft9"/>
+                            <constraint firstItem="rOC-kS-yLd" firstAttribute="trailing" secondItem="9J5-xj-fch" secondAttribute="trailing" constant="16" id="O1P-47-JWq"/>
+                            <constraint firstItem="Q78-4v-e6h" firstAttribute="top" secondItem="XEj-Td-7iY" secondAttribute="top" id="Ro9-cf-2Ey"/>
+                            <constraint firstItem="9J5-xj-fch" firstAttribute="leading" secondItem="rOC-kS-yLd" secondAttribute="leading" constant="16" id="Zp5-X5-QqU"/>
+                            <constraint firstItem="Q78-4v-e6h" firstAttribute="trailing" secondItem="rOC-kS-yLd" secondAttribute="trailing" id="foP-Lf-lL5"/>
+                            <constraint firstItem="Q78-4v-e6h" firstAttribute="leading" secondItem="rOC-kS-yLd" secondAttribute="leading" id="yIO-zO-vey"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="rOC-kS-yLd"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KSz-LG-xZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="842" y="28"/>
+            <point key="canvasLocation" x="460" y="28"/>
         </scene>
     </scenes>
 </document>

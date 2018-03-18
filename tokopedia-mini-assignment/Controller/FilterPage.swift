@@ -22,7 +22,7 @@ class FilterPage: UIViewController {
     
     // MARK: - Actions
     
-    @IBAction func prevPage(_ sender: Any) {
+    @IBAction func applyDidTouched(_ sender: Any) {
         
         productFilter?.setMinimum(price: 111111)
         productFilter?.setMaximum(price: 999999)
@@ -35,4 +35,21 @@ class FilterPage: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func resetDidTouched(_ sender: Any) {
+        
+        productFilter?.setMinimum(price: 10000)
+        productFilter?.setMaximum(price: 100000)
+        
+        productFilter?.show(wholesale: true)
+        productFilter?.show(official: true)
+        
+        productFilter?.showShop(type: ShopType.GOLD_SELLER)
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func closeDidTouched(_ sender: Any) {
+        
+        dismiss(animated: true, completion: nil)
+    }
 }

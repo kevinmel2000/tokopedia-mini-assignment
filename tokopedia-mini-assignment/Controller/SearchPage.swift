@@ -45,14 +45,12 @@ class SearchPage: UIViewController {
         getProductsFromApi(url: API_URL, parameters: parameters)
     }
     
-    // MARK: - Actions
+    // MARK: - Segues
     
     @IBAction func nextPage(_ sender: Any) {
         
         performSegue(withIdentifier: "gotoFilterPage", sender: self)
     }
-    
-    // MARK: - Segues
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
