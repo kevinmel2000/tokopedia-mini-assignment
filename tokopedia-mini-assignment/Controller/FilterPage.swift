@@ -30,7 +30,7 @@ class FilterPage: UIViewController {
         productFilter?.show(wholesale: false)
         productFilter?.show(official: false)
         
-        productFilter?.showShop(type: ShopType.SILVER_SELLER)
+        productFilter?.showShop(type: ShopType.SILVER_MERCHANT)
         
         dismiss(animated: true, completion: nil)
     }
@@ -43,7 +43,7 @@ class FilterPage: UIViewController {
         productFilter?.show(wholesale: true)
         productFilter?.show(official: true)
         
-        productFilter?.showShop(type: ShopType.GOLD_SELLER)
+        productFilter?.showShop(type: ShopType.GOLD_MERCHANT)
         
         dismiss(animated: true, completion: nil)
     }

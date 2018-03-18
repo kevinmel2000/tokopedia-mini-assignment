@@ -10,6 +10,6 @@ import Foundation
 
 enum ShopType : Int {
     
-    case SILVER_SELLER = 1
-    case GOLD_SELLER = 2
+    case SILVER_MERCHANT = 1
+    case GOLD_MERCHANT = 2
 }
