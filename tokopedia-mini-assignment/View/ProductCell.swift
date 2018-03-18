@@ -19,7 +19,8 @@ class ProductCell: UICollectionViewCell {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        //layer.cornerRadius = 5.0
+        // NOTE: Cell's rounded corner
+        // layer.cornerRadius = 5.0
     }
     
     func configure(product : Product) {
